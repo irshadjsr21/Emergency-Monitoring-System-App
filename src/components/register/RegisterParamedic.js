@@ -3,6 +3,8 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import ambulance from '../../images/screen1.jpg'
+
 
 function RegisterParamedic() {
     const [validated, setValidated] = useState(false);
@@ -18,7 +20,7 @@ function RegisterParamedic() {
     };
 
     return (
-        <Card fluid bg="light" border="info" style={{color:'black',textAlign:'center', justifyContent: 'center'}}>
+        <Card fluid bg="light" border="info" style={{backgroundImage:`url(${ambulance})`,opacity: 0.5,color:'white',textAlign:'center', justifyContent: 'center'}}>
             <br />
         <h2>Register Paramedic</h2>
         <Form noValidate validated={validated} onSubmit={handleSubmit} >

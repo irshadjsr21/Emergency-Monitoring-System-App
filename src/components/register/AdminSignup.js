@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-
+import admin from '../../images/admin.jpeg'
 
 function AdminSignup() {
 
@@ -20,7 +20,7 @@ function AdminSignup() {
     };
 
     return (
-        <Card bg="light" border="info" style={{color:'black',textAlign:'center', justifyContent: 'center'}}>
+        <Card  border="info" style={{backgroundImage:`url(${admin})`,opacity: 0.8,color:'black',textAlign:'center', justifyContent: 'center'}}>
         <br />
         <h2>Admin SignUp</h2>
 

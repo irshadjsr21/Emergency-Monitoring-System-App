@@ -3,6 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import admin from '../../images/admin.jpeg'
 
 function RegisterHospital() {
     const [validated, setValidated] = useState(false);
@@ -17,7 +18,7 @@ function RegisterHospital() {
     };
 
     return (
-        <Card fluid bg="light" border="success" style={{color:'black',textAlign:'center', justifyContent: 'center'}}>
+        <Card fluid bg="light" border="success" style={{backgroundImage:`url(${admin})`,opacity: 0.8,color:'red',textAlign:'center', justifyContent: 'center'}}>
         <br />
         <h2>Hospital Registration</h2>
         <Form noValidate validated={validated} onSubmit={handleSubmit} >
