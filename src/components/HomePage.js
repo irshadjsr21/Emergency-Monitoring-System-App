@@ -11,8 +11,8 @@ const HomePage = () => {
   <Nav className="mr-auto">
     </Nav>
     <Nav>
-      <Nav.Link href="/adminlogin">Admin Login</Nav.Link>
-      <Nav.Link href="/adminregister">Admin SignUp</Nav.Link>
+      <Nav.Link href="/admin/login">Admin Login</Nav.Link>
+      <Nav.Link href="/admin/register">Admin SignUp</Nav.Link>
     </Nav>
 </Navbar>
             <Card className="text-center mx-auto" > 
@@ -23,7 +23,7 @@ const HomePage = () => {
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
   </Card.Body>
-  <Card.Footer className="text-muted"><Link to ="/paramediclogin"  variant="primary">Sign In</Link></Card.Footer>
+  <Card.Footer className="text-muted"><Link to ="/paramedic/login"  variant="primary">Sign In</Link></Card.Footer>
 </Card>
 <br />
 <br />
@@ -36,7 +36,7 @@ const HomePage = () => {
     </Card.Text>
     
   </Card.Body>
-  <Card.Footer className="text-muted"><Link to ="/hospitallogin" variant="primary">Login In</Link></Card.Footer>
+  <Card.Footer className="text-muted"><Link to ="/hospital/login" variant="primary">Login In</Link></Card.Footer>
 </Card>
         </Fragment>
     )

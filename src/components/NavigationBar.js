@@ -11,7 +11,7 @@ const NavigationBar = () => {
     <Nav className="mr-auto">
     </Nav>
     <Nav>
-      <Nav.Link href="/adminlogin">Log Out</Nav.Link>
+      <Nav.Link href="/admin/login">Log Out</Nav.Link>
       
     </Nav>
   </Navbar.Collapse>

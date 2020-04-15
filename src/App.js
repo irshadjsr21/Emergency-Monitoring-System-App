@@ -17,13 +17,13 @@ function App() {
       
       <Switch>
         <Route exact path = "/" component={HomePage} />
-        <Route exact path = "/adminregister" component={AdminSignup} />
-        <Route exact path = "/hospitalregister" component={RegisterHospital} />
-        <Route exact path = "/paramedicregister" component={RegisterParamedic} />
-        <Route exact path = "/adminlogin" component={AdminLogin} />
-        <Route exact path = "/admindashboard" component={AdminDashboard} />
-        <Route exact path = "/hospitallogin" component={LoginHospital} />
-        <Route exact path = "/paramediclogin" component={LoginParamedic} />
+        <Route exact path = "/admin/register" component={AdminSignup} />
+        <Route exact path = "/admin/login" component={AdminLogin} />
+        <Route exact path = "/admin/dashboard" component={AdminDashboard} />
+        <Route exact path = "/hospital/register" component={RegisterHospital} />
+        <Route exact path = "/hospital/login" component={LoginHospital} />
+        <Route exact path = "/paramedic/register" component={RegisterParamedic} />
+        <Route exact path = "/paramedic/login" component={LoginParamedic} />
 
       </Switch>
     </Router>

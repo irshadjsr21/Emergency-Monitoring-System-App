@@ -18,7 +18,7 @@ function AdminDashboard() {
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-    <Link to = '/hospitalregister' variant="primary">Hospital Registration</Link>
+    <Link to = '/hospital/register' variant="primary">Hospital Registration</Link>
     </Card.Footer>
   </Card>
   <Card>
@@ -30,7 +30,7 @@ function AdminDashboard() {
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-    <Link to="/paramedicregister" variant="danger">Paramedic Registration</Link>
+    <Link to="/paramedic/register" variant="danger">Paramedic Registration</Link>
     </Card.Footer>
   </Card>
   </CardGroup>
