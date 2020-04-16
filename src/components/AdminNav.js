@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { LinkContainer } from 'react-router-bootstrap';
 import { logoutUser } from '../services/auth';
 
 const AdminNav = (props) => {
@@ -13,9 +14,11 @@ const AdminNav = (props) => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/admin/dashboard">
-          Emergency Monitoring System
-        </Navbar.Brand>
+        <LinkContainer to="/admin/dashboard">
+          <Navbar.Brand >
+            Emergency Monitoring System
+          </Navbar.Brand>
+        </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto"></Nav>
