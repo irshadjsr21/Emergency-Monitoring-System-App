@@ -3,6 +3,11 @@ export const loginUser = ({ userType, token }) => {
   localStorage.setItem('token', token);
 };
 
+export const logoutUser = () => {
+  localStorage.removeItem('userType');
+  localStorage.removeItem('token');
+};
+
 export const isLoggedIn = () => {
   const token = localStorage.getItem('token');
   return !!token;
