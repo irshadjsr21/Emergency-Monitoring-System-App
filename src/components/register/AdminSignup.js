@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import admin from '../../images/admin.jpeg'
 
-export default class CreateExercise extends Component{
+export default class AdminSignup extends Component{
 
   constructor(props) {
     super(props);
