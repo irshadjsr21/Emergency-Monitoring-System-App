@@ -10,6 +10,8 @@ import AdminLogin from './pages/Admin/AdminLogin';
 import LoginAmbulance from './pages/Ambulance/LoginAmbulance';
 import LoginHospital from './pages/Hospital/LoginHospital';
 import { AdminGuard } from './components/Guards/AdminGuard';
+import QuickActions from './components/QuickActions';
+import ManualInput from './components/ManualInput'
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
         />
         <Route exact path="/hospital/login" component={LoginHospital} />
         <Route exact path="/ambulance/login" component={LoginAmbulance} />
+        <Route exact path="/ambulance/quickaction" component={QuickActions} />
+        <Route exact path="/ambulance/quickaction/manualinput" component={ManualInput} />
       </Switch>
     </Router>
   );
