@@ -23,7 +23,7 @@ const HomePage = () => {
       With supporting text below as a natural lead-in to additional content.
     </Card.Text>
   </Card.Body>
-  <Card.Footer className="text-muted"><Link to ="/paramedic/login"  variant="primary">Sign In</Link></Card.Footer>
+  <Card.Footer className="text-muted"><Link to ="/ambulance/login"  variant="primary">Sign In</Link></Card.Footer>
 </Card>
 <br />
 <br />
