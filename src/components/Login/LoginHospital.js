@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import admin from '../../images/admin.jpeg'
+import axios from 'axios'
 
 function LoginHospital() {
     const [validated, setValidated] = useState(false);
