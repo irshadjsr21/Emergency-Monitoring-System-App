@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import admin from '../../images/admin.jpeg'
+//import admin from '../../images/admin.jpeg'
 
 export default class ManualInput extends Component{
 
@@ -83,11 +83,11 @@ export default class ManualInput extends Component{
 
   render(){
     return (
-        <Card border="info" style={{ backgroundImage: `url(${admin})`, opacity: 0.8, color: 'black', textAlign: 'center', justifyContent: 'center' }}>
+        <Card border="info" style={{ /*backgroundImage: `url(${admin})`,*/ opacity: 0.8, color: 'black', textAlign: 'center', justifyContent: 'center' }}>
         <br />
         <h2>Manual Input</h2>
 
-        <Form noValidate validated={validated} onSubmit={handleSubmit} >
+        <Form onSubmit={this.onSubmit} >
 
             <Form.Row className="justify-content-md-center">
                 <Form.Group as={Col} md="4" controlId="validationPatientName">
