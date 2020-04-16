@@ -18,19 +18,19 @@ function AdminDashboard() {
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-    <Link to = '/hospital/register' variant="primary">Hospital Registration</Link>
+    <Link to = '/admin/hospital/create' variant="primary">Hospital Registration</Link>
     </Card.Footer>
   </Card>
   <Card>
     <Card.Body>
-      <Card.Title>Paramedic Registration</Card.Title>
+      <Card.Title>Ambulance Registration</Card.Title>
       <Card.Text>
         Dear Admin, you can add all the heros of your paramedic department who are busy out there saving lives for faster information transfer to your networked hospitals
         content.
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-    <Link to="/paramedic/register" variant="danger">Paramedic Registration</Link>
+    <Link to="/admin/ambulance/create" variant="danger">Ambulance Registration</Link>
     </Card.Footer>
   </Card>
   </CardGroup>
