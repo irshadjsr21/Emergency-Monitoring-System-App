@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import admin from '../images/admin.jpeg';
+
+import React, {Component} from 'react'
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+//import admin from '../../images/admin.jpg'
 
 export default class ManualInput extends Component {
+
   constructor(props) {
     super(props);
 
@@ -80,111 +82,96 @@ export default class ManualInput extends Component {
 
   render() {
     return (
-      <Card
-        border="info"
-        style={{
-          backgroundImage: `url(${admin})`,
-          opacity: 0.8,
-          color: 'black',
-          textAlign: 'center',
-          justifyContent: 'center',
-        }}
-      >
+        <Card border="info" style={{ /*backgroundImage: `url(${admin})`,*/ opacity: 0.8, color: 'black', textAlign: 'center', justifyContent: 'center' }}>
         <br />
         <h2>Manual Input</h2>
 
-        <Form onSubmit={this.onSubmit}>
-          <Form.Row className="justify-content-md-center">
-            <Form.Group as={Col} md="4" controlId="validationPatientName">
-              <Form.Label>Patient Name</Form.Label>
-              <Form.Control
-                required
-                type="text"
-                value={this.state.name}
-                onChange={this.onChangeName}
-              />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            </Form.Group>
-          </Form.Row>
+        <Form onSubmit={this.onSubmit} >
 
-          <Form.Row className="justify-content-md-center">
-            <Form.Group as={Col} md="4" controlId="validationContactNumber">
-              <Form.Label>Contact Number</Form.Label>
-              <Form.Control
-                required
-                value={this.state.number}
-                onChange={this.onChangeNumber}
-              />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-            </Form.Group>
-          </Form.Row>
+            <Form.Row className="justify-content-md-center">
+                <Form.Group as={Col} md="4" controlId="validationPatientName">
+                    <Form.Label>Patient Name</Form.Label>
+                    <Form.Control
+                        required
+                        type="text"
+                        value={this.state.name}
+                        onChange={this.onChangeName}
+                    />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                </Form.Group>
+            </Form.Row>
 
-          <Form.Row className="justify-content-md-center">
-            <Form.Group
-              as={Col}
-              md="4"
-              controlId="validationEmergencyContactNumber"
-            >
-              <Form.Label>Emergency Contact Number</Form.Label>
-              <Form.Control
-                required
-                value={this.state.enumber}
-                onChange={this.onChangeEnumber}
-              />
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid Contact Number.
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Form.Row>
+            <Form.Row className="justify-content-md-center">
+                <Form.Group as={Col} md="4" controlId="validationContactNumber">
+                    <Form.Label>Contact Number</Form.Label>
+                    <Form.Control
+                        required
+                        value={this.state.number}
+              onChange={this.onChangeNumber}
+                    />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                </Form.Group>
+            </Form.Row>
 
-          <Form.Row className="justify-content-md-center">
-            <Form.Group as={Col} md="4" controlId="validationMonitorReadings">
-              <Form.Label>Monitor Readings</Form.Label>
-              <Form.Control
-                required
-                value={this.state.readings}
-                onChange={this.onChangeReadings}
-              />
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid readings.
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Form.Row>
+            <Form.Row className="justify-content-md-center">
+                <Form.Group as={Col} md="4" controlId="validationEmergencyContactNumber">
+                    <Form.Label>Emergency Contact Number</Form.Label>
+                    <Form.Control
+                        required
+                        value={this.state.enumber}
+              onChange={this.onChangeEnumber}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid Contact Number.
+          </Form.Control.Feedback>
+                </Form.Group>
+            </Form.Row>
 
-          <Form.Row className="justify-content-md-center">
-            <Form.Group as={Col} md="4" controlId="validationNatureOfAccident">
-              <Form.Label>Nature of Accident</Form.Label>
-              <Form.Control
-                required
-                value={this.state.accnature}
-                onChange={this.onChangeAccNature}
-              />
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid details.
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Form.Row>
 
-          <Form.Row className="justify-content-md-center">
-            <Form.Group
-              as={Col}
-              md="4"
-              controlId="validationSeverityOfCondition"
-            >
-              <Form.Label>Severity of Condition</Form.Label>
-              <Form.Control
-                required
-                value={this.state.condition}
-                onChange={this.onChangeCondition}
-              />
-              <Form.Control.Feedback type="invalid">
-                Please provide a valid details.
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Form.Row>
+            <Form.Row className="justify-content-md-center">
+                <Form.Group as={Col} md="4" controlId="validationMonitorReadings">
+                    <Form.Label>Monitor Readings</Form.Label>
+                    <Form.Control
+                        required
+                        value={this.state.readings}
+              onChange={this.onChangeReadings}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid readings.
+          </Form.Control.Feedback>
+                </Form.Group>
+            </Form.Row>
 
-          <Button type="submit">Submit</Button>
-          <br />
+            <Form.Row className="justify-content-md-center">
+                <Form.Group as={Col} md="4" controlId="validationNatureOfAccident">
+                    <Form.Label>Nature of Accident</Form.Label>
+                    <Form.Control
+                        required
+                        value={this.state.accnature}
+              onChange={this.onChangeAccNature}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid details.
+          </Form.Control.Feedback>
+                </Form.Group>
+            </Form.Row>
+
+            <Form.Row className="justify-content-md-center">
+                <Form.Group as={Col} md="4" controlId="validationSeverityOfCondition">
+                    <Form.Label>Severity of Condition</Form.Label>
+                    <Form.Control
+                        required
+                        value={this.state.condition}
+              onChange={this.onChangeCondition}
+                    />
+                    <Form.Control.Feedback type="invalid">
+                        Please provide a valid details.
+          </Form.Control.Feedback>
+                </Form.Group>
+            </Form.Row>
+
+            <Button type="submit">Submit</Button>
+            <br />
         </Form>
         <br />
       </Card>

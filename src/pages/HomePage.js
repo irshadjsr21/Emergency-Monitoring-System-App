@@ -22,7 +22,7 @@ const HomePage = () => {
       </Navbar>
       <Card className="text-center mx-auto">
         <Card.Body>
-          <Card.Title>Paramedic Login</Card.Title>
+          <Card.Title>Ambulance Login</Card.Title>
           <Card.Text>
             With supporting text below as a natural lead-in to additional
             content.
