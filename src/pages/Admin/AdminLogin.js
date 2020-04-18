@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import admin from '../../images/admin.jpeg';
+import blue from '../../images/blue.jpg';
 import { adminLogin } from '../../services/admin';
 
 class AdminLogin extends Component {
@@ -62,26 +62,34 @@ class AdminLogin extends Component {
       <Card
         border="info"
         style={{
-          backgroundImage: `url(${admin})`,
-          opacity: 0.8,
+          backgroundImage: `url(${blue})`,
+          backgroundSize : 'cover',
           color: 'black',
           textAlign: 'center',
-          justifyContent: 'center',
+          padding : '20px',
+          margin : '40px'
         }}
       >
         <br />
-        <h2>Admin Login</h2>
-
+        <h2 style={{color : '#0044cc'}}>Admin Login</h2>
+        <br />
         <Form onSubmit={this.onSubmit}>
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationAdminEmail">
-              <Form.Label>Email</Form.Label>
+            <i class="fas fa-envelope-open fa-2x" style={{color : '#0044cc'}}></i>
               <Form.Control
                 type="email"
                 required
+                placeholder= "Enter your Email"
                 value={this.state.email}
                 onChange={this.onChangeEmail}
                 isInvalid={this.state.errors.email}
+                style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
               />
               <Form.Control.Feedback type="invalid">
                 {this.state.errors.email}
@@ -91,13 +99,20 @@ class AdminLogin extends Component {
 
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationAdminPassword">
-              <Form.Label>Password</Form.Label>
+            <i class="fas fa-key fa-2x" style={{color : '#0044cc'}}></i>
               <Form.Control
                 type="password"
                 required
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 isInvalid={this.state.errors.password}
+                placeholder= "Enter your password"
+                style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
               />
               <Form.Control.Feedback type="invalid">
                 {this.state.errors.password}
@@ -105,8 +120,11 @@ class AdminLogin extends Component {
             </Form.Group>
           </Form.Row>
 
-          <Button type="submit">Login Admin</Button>
+          <Button type="submit">Login In</Button>
           <br />
+          <br />
+          <Button className="pull-right" variant="dark pull-right" href="/" type="button"><i class="fas fa-arrow-left"></i> Back To Main Menu</Button>
+        
         </Form>
         <br />
       </Card>

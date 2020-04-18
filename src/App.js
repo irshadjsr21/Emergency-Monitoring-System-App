@@ -37,6 +37,7 @@ function App() {
         <Route exact path="/ambulance/quickaction/manualinput" component={ManualInput} />
         <Redirect to="/"></Redirect>
       </Switch>
+      
     </Router>
   );
 }

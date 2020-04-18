@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import admin from '../../images/admin.jpeg';
+import green from '../../images/green.jpg';
 import { adminSignup } from '../../services/admin';
 
 export default class AdminSignup extends Component {
@@ -72,20 +72,21 @@ export default class AdminSignup extends Component {
       <Card
         border="info"
         style={{
-          backgroundImage: `url(${admin})`,
-          opacity: 0.8,
+          backgroundImage: `url(${green})`,
+          backgroundSize : 'cover',
           color: 'black',
           textAlign: 'center',
-          justifyContent: 'center',
+          padding : '20px',
+          margin : '40px'
         }}
       >
         <br />
-        <h2>Admin SignUp</h2>
-
+        <h2 style={{color:'#004d1a'}}>Admin SignUp</h2>
+        <br />
         <Form onSubmit={this.onSubmit}>
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationAdminName">
-              <Form.Label>Hospital Name</Form.Label>
+              <Form.Label style={{color:'#004d1a'}}>Hospital Name</Form.Label>
               <Form.Control
                 required
                 type="text"
@@ -112,7 +113,7 @@ export default class AdminSignup extends Component {
 
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationAdminEmail">
-              <Form.Label>Email</Form.Label>
+              <Form.Label style={{color:'#004d1a'}}>Email</Form.Label>
               <Form.Control
                 type="email"
                 required
@@ -128,7 +129,7 @@ export default class AdminSignup extends Component {
 
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationAdminPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label style={{color:'#004d1a'}}>Password</Form.Label>
               <Form.Control
                 type="password"
                 required
@@ -145,12 +146,15 @@ export default class AdminSignup extends Component {
           <Form.Group>
             <Form.Check
               required
-              label="Agree to terms and conditions"
+              label="I agree to terms and conditions"
               feedback="You must agree before submitting."
             />
           </Form.Group>
-          <Button type="submit">Admin SignUp</Button>
+          <Button variant="success" type="submit">Sign Up</Button>
           <br />
+          <br />
+          <Button className="pull-right" variant="dark pull-right" href="/" type="button"><i class="fas fa-arrow-left"></i> Back To Main Menu</Button>
+        
         </Form>
         <br />
       </Card>
