@@ -21,11 +21,13 @@ function App() {
         <Route exact path="/admin/register" component={AdminSignup} />
         <Route exact path="/admin/login" component={AdminLogin} />
         
+        {/* 
         <Route exact path="/admin/dashboard" component={AdminDashboard} />
         <Route exact path="/admin/hospital/create" component={RegisterHospital} />
         <Route exact path="/admin/ambulance/create" component={RegisterAmbulance} />
-        
-        {/* <AdminGuard exact path="/admin/dashboard" component={AdminDashboard} />
+         */}
+
+         <AdminGuard exact path="/admin/dashboard" component={AdminDashboard} />
         <AdminGuard
           exact
           path="/admin/hospital/create"
@@ -35,7 +37,7 @@ function App() {
           exact
           path="/admin/ambulance/create"
           component={RegisterAmbulance}
-        /> */}
+        /> 
         <Route exact path="/hospital/login" component={LoginHospital} />
         <Route exact path="/ambulance/login" component={LoginAmbulance} />
         <Route exact path="/ambulance/quickaction" component={QuickActions} />
