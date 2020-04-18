@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import ambulance from '../../images/ambulance.jpg';
+import green from '../../images/green.jpg';
 import { ambulanceLogin } from '../../services/ambulance';
 
 class LoginAmbulance extends Component {
@@ -62,26 +62,34 @@ class LoginAmbulance extends Component {
       <Card
         border="info"
         style={{
-          backgroundImage: `url(${ambulance})`,
-          opacity: 0.8,
+          backgroundImage: `url(${green})`,
+          backgroundSize : 'cover',
           color: 'black',
           textAlign: 'center',
-          justifyContent: 'center',
+          padding : '20px',
+          margin : '40px'
         }}
       >
         <br />
-        <h2>ambulance Login</h2>
-
+        <h2 style={{color:'#004d1a'}}>Ambulance Login</h2>
+        <br />
         <Form onSubmit={this.onSubmit}>
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationambulanceEmail">
-              <Form.Label>Email</Form.Label>
+            <i class="fas fa-envelope-open fa-2x" style={{color : '#004d1a'}}></i>
               <Form.Control
                 type="email"
+                placeholder="Enter your Email"
                 required
                 value={this.state.email}
                 onChange={this.onChangeEmail}
                 isInvalid={this.state.errors.email}
+                style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
               />
               <Form.Control.Feedback type="invalid">
                 {this.state.errors.email}
@@ -91,13 +99,20 @@ class LoginAmbulance extends Component {
 
           <Form.Row className="justify-content-md-center">
             <Form.Group as={Col} md="4" controlId="validationambulancePassword">
-              <Form.Label>Password</Form.Label>
+            <i class="fas fa-key fa-2x" style={{color : '#004d1a'}}></i>
               <Form.Control
                 type="password"
+                placeholder="Enter your password"
                 required
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 isInvalid={this.state.errors.password}
+                style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
               />
               <Form.Control.Feedback type="invalid">
                 {this.state.errors.password}
@@ -112,8 +127,10 @@ class LoginAmbulance extends Component {
               feedback="You must agree before submitting."
             />
           </Form.Group>
-          <Button type="submit">Login</Button>
+          <Button variant="success" type="submit">Login</Button>
           <br />
+          <br />
+          <Button className="pull-right" variant="dark pull-right" href="/" type="button"><i class="fas fa-arrow-left"></i> Back To Main Menu</Button>
         </Form>
         <br />
       </Card>

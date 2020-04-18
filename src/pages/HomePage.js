@@ -9,14 +9,14 @@ const HomePage = () => {
   return (
     <Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/">Emergency Monitoring System</Navbar.Brand>
+        <Navbar.Brand href="/"><i class="fas fa-laptop-medical"></i> Emergency Monitoring System</Navbar.Brand>
         <Nav className="mr-auto"></Nav>
         <Nav>
           <LinkContainer to="/admin/login">
-            <Nav.Link>Admin Login</Nav.Link>
+            <Nav.Link><i className="fas fa-sign-in-alt"></i> Admin Login</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/admin/register">
-            <Nav.Link>Admin SignUp</Nav.Link>
+            <Nav.Link><i class="fas fa-user-plus"></i> Admin SignUp</Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar>
@@ -30,7 +30,7 @@ const HomePage = () => {
         </Card.Body>
         <Card.Footer className="text-muted">
           <Link to="/ambulance/login" variant="primary">
-            Sign In
+            Sign In <i className="fas fa-sign-in-alt"></i>
           </Link>
         </Card.Footer>
       </Card>
@@ -46,7 +46,7 @@ const HomePage = () => {
         </Card.Body>
         <Card.Footer className="text-muted">
           <Link to="/hospital/login" variant="primary">
-            Login In
+            Sign In <i className="fas fa-sign-in-alt"></i>
           </Link>
         </Card.Footer>
       </Card>
