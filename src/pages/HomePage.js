@@ -14,7 +14,7 @@ const HomePage = () => {
   return (
     <Fragment>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/"><i class="fas fa-laptop-medical"></i> Emergency Monitoring System</Navbar.Brand>
+        <Navbar.Brand href="/" style={{fontSize: '20px', fontWeight : 'bold'}}><i class="fas fa-laptop-medical"></i> Emergency Monitoring System</Navbar.Brand>
         <Nav className="mr-auto"></Nav>
         <Nav>
           <LinkContainer to="/admin/login">

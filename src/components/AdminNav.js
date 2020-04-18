@@ -15,7 +15,7 @@ const AdminNav = (props) => {
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <LinkContainer to="/admin/dashboard">
-          <Navbar.Brand >
+          <Navbar.Brand style={{fontSize: '20px', fontWeight : 'bold'}}><i class="fas fa-laptop-medical"></i> 
             Emergency Monitoring System
           </Navbar.Brand>
         </LinkContainer>
@@ -24,7 +24,7 @@ const AdminNav = (props) => {
           <Nav className="mr-auto"></Nav>
           <Nav>
             <Nav.Link href="#" onClick={logout}>
-              Log Out
+            <i className="fas fa-sign-in-alt"></i> Log Out
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

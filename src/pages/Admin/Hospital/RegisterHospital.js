@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import { createHospital } from '../../../services/admin';
 import AdminNav from '../../../components/AdminNav';
+import blue from '../../../images/blue.jpg';
 
 export default class RegiesterHospital extends Component {
   constructor(props) {
@@ -72,17 +73,19 @@ export default class RegiesterHospital extends Component {
     return (
       <div>
         <AdminNav {...this.props}></AdminNav>
-        <Container
+        <Card
           style={{
-            opacity: 0.8,
+            backgroundImage: `url(${blue})`,
+            backgroundSize : 'cover',
             color: 'black',
             textAlign: 'center',
-            justifyContent: 'center',
+            padding : '20px',
+            margin : '40px'
           }}
         >
           <br />
-          <h2>Add Hospital</h2>
-
+          <h2 style={{color : '#0044cc'}}>Add Hospital</h2>
+          <br />
           {this.state.isCreated && (
             <Alert
               variant="success"
@@ -101,29 +104,44 @@ export default class RegiesterHospital extends Component {
           <Form onSubmit={this.onSubmit}>
             <Form.Row className="justify-content-md-center">
               <Form.Group as={Col} md="4" controlId="validationAdminName">
-                <Form.Label>Branch Name</Form.Label>
+              <i class="fas fa-map-marked-alt fa-2x" style={{color : '#0044cc'}}></i>
                 <Form.Control
                   required
                   type="text"
+                  placeholder = "Please enter the branch name"
                   value={this.state.branchName}
                   onChange={this.onChangeName}
                   isInvalid={this.state.errors.branchName}
+                  style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
                 />
                 <Form.Control.Feedback type="invalid">
                   {this.state.errors.branchName}
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
-
+                  <br />
+                  <br />
             <Form.Row className="justify-content-md-center">
               <Form.Group as={Col} md="4" controlId="validationAdminEmail">
-                <Form.Label>Email</Form.Label>
+              <i class="fas fa-envelope-open fa-2x" style={{color : '#0044cc'}}></i>
                 <Form.Control
                   type="email"
                   required
+                  placeholder = "Please entered the branch email address"
                   value={this.state.email}
                   onChange={this.onChangeEmail}
                   isInvalid={this.state.errors.email}
+                  style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
                 />
                 <Form.Control.Feedback type="invalid">
                   {this.state.errors.email}
@@ -134,7 +152,7 @@ export default class RegiesterHospital extends Component {
             <br />
           </Form>
           <br />
-        </Container>
+        </Card>
       </div>
     );
   }
