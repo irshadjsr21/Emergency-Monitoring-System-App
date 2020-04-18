@@ -146,7 +146,7 @@ export default class AdminSignup extends Component {
           <Form.Group>
             <Form.Check
               required
-              label="Agree to terms and conditions"
+              label="I agree to terms and conditions"
               feedback="You must agree before submitting."
             />
           </Form.Group>
