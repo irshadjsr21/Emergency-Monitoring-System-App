@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
-
-
+import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button'
 
 let socket;
 
@@ -32,15 +32,33 @@ const HospitalDashboard = () => {
     });
 }, []);
 
+  const Accepted = () => {
+
+  }
+
+  const Declined = () => {
+    
+  }
 
   return (
 <div>
-    <p>{name}</p>
-    <p>{number}</p>
-    <p>{enumber}</p>
-    <p>{readings}</p>
-    <p>{nature}</p>
-    <p>{condition}</p>
+<Alert variant="danger">
+  <Alert.Heading>Incoming Patient Details</Alert.Heading>
+  
+  <p>Name : {name}</p>
+    <p>Contact Number : {number}</p>
+    <p>Emergency Contact Number : {enumber}</p>
+    <p>Monitor Reading : {readings}</p>
+    <p>Nature of Emergency : {nature}</p>
+    <p>Severity of Emergency : {condition}</p>
+  
+  <hr />
+  <p className="mb-0">
+  <Button disabled variant="success" onClick={Accepted}><i class="fa fa-check ">  Accept</i></Button>
+  <Button disabled variant="danger" onClick={Declined}><i class="fa fa-times">  Decline</i> </Button>
+  </p>
+</Alert>
+    
 </div>
   );
 }
