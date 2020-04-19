@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Alert from 'react-bootstrap/Alert';
 import { createAmbulance } from '../../../services/admin';
 import AdminNav from '../../../components/AdminNav';
+import blue from '../../../images/red.jpg';
 
 export default class RegiesterAmbulance extends Component {
   constructor(props) {
@@ -74,14 +75,16 @@ export default class RegiesterAmbulance extends Component {
         <AdminNav {...this.props}></AdminNav>
         <Card
           style={{
-            opacity: 0.8,
+            backgroundImage: `url(${blue})`,
+            backgroundSize : 'cover',
             color: 'black',
             textAlign: 'center',
-            justifyContent: 'center',
+            padding : '20px',
+            margin : '40px'
           }}
         >
           <br />
-          <h2>Add Ambulance</h2>
+          <h2 style={{color : '#b30000'}}>Add Ambulance</h2>
 
           {this.state.isCreated && (
             <Alert
@@ -97,40 +100,54 @@ export default class RegiesterAmbulance extends Component {
               </div>
             </Alert>
           )}
-
+          <br />
           <Form onSubmit={this.onSubmit}>
             <Form.Row className="justify-content-md-center">
               <Form.Group as={Col} md="4" controlId="validationAdminName">
-                <Form.Label>Vehicle No.</Form.Label>
+              <i class="fas fa-ambulance fa-2x" style={{color:'#b30000'}}></i>
                 <Form.Control
                   required
+                  placeholder="Please enter the Vechile No."
                   type="text"
                   value={this.state.vehicleNo}
                   onChange={this.onChangeName}
                   isInvalid={this.state.errors.vehicleNo}
+                  style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
                 />
                 <Form.Control.Feedback type="invalid">
                   {this.state.errors.vehicleNo}
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
-
+            <br />
             <Form.Row className="justify-content-md-center">
               <Form.Group as={Col} md="4" controlId="validationAdminEmail">
-                <Form.Label>Email</Form.Label>
+              <i class="fas fa-envelope-open fa-2x" style={{color : '#b30000'}}></i>
                 <Form.Control
+                placeholder="Please enter your email address"
                   type="email"
                   required
                   value={this.state.email}
                   onChange={this.onChangeEmail}
                   isInvalid={this.state.errors.email}
+                  style = {{border: 'none',
+                background: 'transparent',
+                  borderBottom: '1px solid #000000',
+                  boxShadow: 'none',
+                  borderRadius: '0',
+                   }}
                 />
                 <Form.Control.Feedback type="invalid">
                   {this.state.errors.email}
                 </Form.Control.Feedback>
               </Form.Group>
             </Form.Row>
-            <Button type="submit">Register Ambulance</Button>
+            <Button variant="danger" type="submit">Register Ambulance</Button>
             <br />
           </Form>
           <br />

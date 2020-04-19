@@ -46,7 +46,7 @@ class LoginAmbulance extends Component {
 
     ambulanceLogin(form)
       .then((token) => {
-        this.props.history.push('/ambulance/quickactions');
+        this.props.history.push('/ambulance/quickaction');
       })
       .catch((error) => {
         if (error.data) {

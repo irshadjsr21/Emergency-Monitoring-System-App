@@ -47,7 +47,7 @@ export default class AdminSignup extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
+    console.log("Inside submit")
     const form = {
       name: this.state.name,
       email: this.state.email,
@@ -56,9 +56,11 @@ export default class AdminSignup extends Component {
 
     adminSignup(form)
       .then((res) => {
+        console.log("then" + res)
         this.props.history.push('/admin/login');
       })
       .catch((error) => {
+        console.error("error" + error)
         if (error.data) {
           this.setState({
             errors: error.data,
