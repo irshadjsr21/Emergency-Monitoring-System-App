@@ -56,7 +56,7 @@ export default class QuickActions extends Component {
 <Card.Body>
         <Card.Title style={{align:'center',textAlign:'center'}} className="justify-content-md-center"> <i class="fas fa-edit fa-4x"></i></Card.Title>
         <Card.Text style={{align:'center',textAlign:'center',color:'white'}}>
-        <Link style={{color:'white',fontWeight : 'bold'}} to={'/manualinput'}>Start Manual Input</Link>
+        <Link style={{color:'white',fontWeight : 'bold'}} to={'/ambulance/quickaction/manualinput'}>Start Manual Input</Link>
         </Card.Text>
       </Card.Body>
       </Card>
