@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import io from 'socket.io-client';
 //import admin from '../../images/admin.jpg'
 
 export default class ManualInput extends Component {
@@ -67,7 +68,7 @@ export default class ManualInput extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-
+    var socket = io.connect('http://localhost:4000');
     const form = {
       name: this.state.name,
       number: this.state.number,
@@ -77,7 +78,9 @@ export default class ManualInput extends Component {
       condition: this.state.condition,
     };
 
-    console.log(form);
+    socket.emit('chat', form);
+  alert("Details Sent");
+
   }
 
   render() {
@@ -147,8 +150,8 @@ export default class ManualInput extends Component {
                     <Form.Label>Nature of Accident</Form.Label>
                     <Form.Control
                         required
-                        value={this.state.accnature}
-              onChange={this.onChangeAccNature}
+                        value={this.state.nature}
+              onChange={this.onChangeNature}
                     />
                     <Form.Control.Feedback type="invalid">
                         Please provide a valid details.
